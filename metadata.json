@@ -1,8 +1,7 @@
 {
 	"name":"Norsk",
-	"directory":"norsk",
-	"thumbnail":"/norsk/norsk.jpg",
-	"screenshot":"/norsk/norsk.jpg",
+	"thumbnail":"norsk.jpg",
+	"screenshot":"norsk.jpg",
 	"pageTypes":[],
 	"defaultColorSwatch":"Earth 1",
 	"defaultFontSwatch":"Droid Serif"
