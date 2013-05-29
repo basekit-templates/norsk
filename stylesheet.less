@@ -365,86 +365,30 @@ hr.line.align-right {
 
 .widget.navigation ul li:hover
 {
-    background-color: darken(@color-swatch2,20%);
+    background-color: darken(@color-swatch2,15%);
     cursor: pointer;
     color: @color-swatch2;
-}
-
-.widget.navigation ul li.folder {
-    background-image: image('/norsk/images/arrow-down.png');
-    background-position: right center;
-    background-repeat: no-repeat;
-}
-
-.widget.navigation ul li.folder .text 
-{
-    display:inline-block;
-    padding: 18px 20px;
-    color: lighten(@color-swatch4,30%);
-}
-
-.widget.navigation ul li.folder ul li .text 
-{
-    padding: 0px;
 }
 
 .widget.navigation ul li span.menu-icon {
     margin-right: 5px;
 }
 
-.widget.navigation ul.align-right li.folder a{
-    background-position: 0px center;
-}
-
 .widget.navigation ul li a
 {
     display: block;
     padding: 18px 20px;
-    color: lighten(@color-swatch4,30%);
+    color: @font-swatch6-color;
     font-weight: @font-swatch6-font-weight;
+    font-family:@font-swatch6-font-family;
+    font-size:@font-swatch6-font-size;
     text-decoration: none;
-}
-
-.widget.navigation li ul {
-    display: none;
-}
-
-.widget.navigation ul li:hover ul {
-    display: block;
-}
-
-.widget.navigation ul li:hover ul li {
-    background-image: none;
-    background-color: darken(@color-swatch2,10%);
-    padding-left: 10px;
-    cursor: pointer;
-}
-
-.widget.navigation ul li:hover ul li a {
-    background-image: none;
-}
-
-.widget.navigation ul li:hover ul li:hover {
-    background-color: lighten(@color-swatch2,10%);
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-}
-
-.widget.navigation ul.align-right li.folder {
-    background-position: left center;
-}
-
-.widget.navigation.nm-3-tabs ul.align-right li.folder, .widget.navigation.nm-4-tabs ul.align-right li.folder {
-    background-position: left center;
 }
 
 /* Extended Navigation */
 
 .widget.extendednavigation 
 {
-
 }
 
 .widget.extendednavigation ul {
@@ -485,7 +429,10 @@ hr.line.align-right {
 {
     display:inline-block;
     padding: 18px 20px;
-    color: lighten(@color-swatch4,30%);
+    color: @font-swatch6-color;
+    font-weight: @font-swatch6-font-weight;
+    font-family:@font-swatch6-font-family;
+    font-size:@font-swatch6-font-size;
 }
 
 .widget.extendednavigation ul li.folder ul li .text 
@@ -505,8 +452,10 @@ hr.line.align-right {
 {
     display: block;
     padding: 18px 20px;
-    color: lighten(@color-swatch4,30%);
+    color: @font-swatch6-color;
     font-weight: @font-swatch6-font-weight;
+    font-family:@font-swatch6-font-family;
+    font-size:@font-swatch6-font-size;
     text-decoration: none;
 }
 
