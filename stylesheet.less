@@ -341,10 +341,6 @@ footer .widget.content {
 
 .widget.extendednavigation ul li.folder {
   padding-right: 8px;
-  background-image: image('/images/arrow-down.svg');
-  background-size: 11px 14px;
-  background-position: right center;
-  background-repeat: no-repeat;
   height: 100%;
   cursor: pointer;
 }
@@ -1595,7 +1591,8 @@ footer .widget.profile .twitter span {
   cursor: pointer;
   z-index: 10;
   background: image('/images/slideshow-play.png') center no-repeat;
-  background-size: 100%;
+  background-size: contain;
+  text-indent: 2000px;
   width: 12%;
   height: 12%;
   top: 45%;
@@ -1608,7 +1605,7 @@ footer .widget.profile .twitter span {
 
 .widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause {
   background: image('/images/slideshow-pause.png') center no-repeat;
-  background-size: 100%;  
+  background-size: contain;  
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls .dot {
