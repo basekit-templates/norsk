@@ -1,8 +1,141 @@
 {
 	"name":"Norsk",
-	"thumbnail":"norsk.jpg",
-	"screenshot":"norsk.jpg",
-	"pageTypes":[],
-	"defaultColorSwatch":"Earth 1",
-	"defaultFontSwatch":"Droid Serif"
+	"thumbnail":"norsk.png",
+	"screenshot":"norsk.png",
+	"colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#2d2727",
+            "color3":"#8fcb85",
+            "color4":"#5c5757",
+            "color5":"#aa9c8d",
+            "color6":"#545454",
+            "color7":"#f8f5eb"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#2d2727",
+            "color3":"#d8bb83",
+            "color4":"#5c5757",
+            "color5":"#aa9c8d",
+            "color6":"#545454",
+            "color7":"#f8f5eb"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#2d2727",
+            "color3":"#7faae5",
+            "color4":"#5c5757",
+            "color5":"#aa9c8d",
+            "color6":"#545454",
+            "color7":"#f8f5eb"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#2d2727",
+            "color3":"#d88c83",
+            "color4":"#5c5757",
+            "color5":"#aa9c8d",
+            "color6":"#545454",
+            "color7":"#f8f5eb"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#2d2727",
+            "color3":"#b0a690",
+            "color4":"#5c5757",
+            "color5":"#aa9c8d",
+            "color6":"#545454",
+            "color7":"#f8f5eb"
+        }
+    },
+    "fontSwatch": {
+       "title": "Droid Serif",
+        "font1": {
+            "font-family": "Droid Serif",
+            "font-size": "32px",
+            "font-weight": "400",
+            "line-height": "40px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "Droid Serif",
+            "font-size": "30px",
+            "font-weight": "inherit",
+            "line-height": "38px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "Droid Serif",
+            "font-size": "26px",
+            "font-weight": "inherit",
+            "line-height": "34px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "Droid Serif",
+            "font-size": "20px",
+            "font-weight": "inherit",
+            "line-height": "28px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "Helvetica",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "25px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "Droid Serif",
+            "font-size": "13px",
+            "font-weight": "400",
+            "line-height": "23px",
+            "color": "lighten(@color-swatch6,40%)",
+            "color-hover": "@color-swatch6",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
+        },
+        "font7": {
+            "font-family": "Helvetica",
+            "font-size": "12px",
+            "font-weight": "400",
+            "line-height": "25px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit",
+            "background-color": "lighten(@color-swatch3,25%)",
+            "background-color-hover": "lighten(@color-swatch3,20%)"
+        },
+        "font8": {
+            "font-family": "Droid Serif",
+            "font-size": "30px",
+            "font-weight": "400",
+            "line-height": "42px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "Droid Serif",
+            "font-size": "18px",
+            "font-weight": "400",
+            "line-height": "30px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "Droid Serif",
+            "font-size": "25px",
+            "font-weight": "400",
+            "line-height": "40px",
+            "color": "@color-swatch6",
+            "letter-spacing": "inherit"
+        }
+    }
 }

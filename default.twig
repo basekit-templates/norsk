@@ -1,16 +1,51 @@
 {% extends "layout.twig" %}
 
 {% block content %}
-<header>
-{{widget('companyheader', 'companyheader', {"defaultlogo": asset('images/norsk-logo.png')})|raw}}
-{{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
+
+<div class="canvas">
+
+<div class="inner-bg">
+
+<div class="bk-pt-default">
+
+ <header>
+   <div class="wrapper clearfix">
+        <div class="companyheader clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </div>
+            {{widget('extendednavigation', 'navigationheader', {})|raw}}          
+    </div>
 </header>
 
-{{zone('main')|raw}}
+<div class="main wrapper clearfix">
+    {{zone('main')|raw}}
+</div>  
 
 <footer>
-{{widget('companyaddress', 'companyaddressfooter', {"bkprofileaddress":profile.address, 
-"bkprofileaddress1":profile.address1, "bkprofileaddress2":profile.address2, 
-"bkprofilepostalcode":profile.postalcode, "bkprofilecountry":profile.country})|raw}}
+    <div class="wrapper clearfix">
+        <div class="responsivecolumns columns-three-33-34-33">
+           <div class="column columns-three-left">
+                {{widget('content', 'footercolumn1content1', {"content":"<h4>Lorem Ipsum Dolor</h4>"})|raw}}
+                {{widget('profile', 'footercolumn1profileaddress', { 'profileType':'address', 'address':'profile'})|raw}}
+           </div>
+           <div class="column columns-three-middle">
+                {{widget('content', 'footercolumn2content1', {"content":"<h4>Vivamus Tempus</h4>"})|raw}}
+                {{widget('profile', 'footercolumn2phone', { 'profileType':'phone', 'phone':'profile'})|raw}}
+           </div>
+           <div class="column columns-three-right">
+                {{widget('content', 'footercolumn3content1', {"content":"<h4>Lorem Ipsum Dolor</h4>"})|raw}}
+                {{widget('profile', 'footercolumn3profilesocialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+               
+           </div>
+        </div>
+    </div>
 </footer>
+
+</div>
+
+</div>
+
+</div>
+
 {% endblock %}
