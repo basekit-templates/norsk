@@ -154,7 +154,7 @@ header {
 .widget.companyname {
   display: block;
   float: left;
-  margin-top: 16px;
+  margin-top: 18px;
 }
 
 .companyname a:hover {
@@ -288,7 +288,10 @@ footer .widget.content {
   float: right;
   position: relative;
   background-color: transparent;
-  max-width: 690px;
+}
+
+.widget.extendednavigation a.pull {
+  display: none;
 }
 
 .widget.extendednavigation ul {
@@ -317,6 +320,21 @@ footer .widget.content {
   display: block;
   padding: 26px 0 20px 0;
 }
+
+.widget.extendednavigation ul li.folder {
+  display: block;
+  background-image: image('/images/arrow-down.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.widget.extendednavigation ul li.folder:hover {
+  background-image: image('/images/arrow-down-hov.png');
+  color: @font-swatch6-color-hover;
+}
+
 
 .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
   display: block;
@@ -356,7 +374,7 @@ footer .widget.content {
   width: 50%;
   position: absolute;
   background-color: @color-swatch1;
-  border: 3px solid lighten(@color-swatch3,25%);
+  border: 1px solid lighten(@color-swatch3,25%);
   z-index: 500;
   margin-top: 20px;
 }
@@ -365,7 +383,7 @@ footer .widget.content {
   display: block;
   width: 100%;
   text-align: left;
-  border-bottom: 3px solid lighten(@color-swatch3,25%);
+  border-bottom: 1px solid lighten(@color-swatch3,25%);
   padding: 10px 0;
 }
 
@@ -382,6 +400,7 @@ footer .widget.content {
   background-image: none;
   color: @font-swatch6-color;
   margin-left: 0;
+  padding:0;
 }
 
 .widget.extendednavigation li:hover > ul > li > a .text {
@@ -454,8 +473,12 @@ footer .widget.content {
   line-height:@font-swatch8-line-height;
   color: @font-swatch8-color;
   letter-spacing: @font-swatch8-letter-spacing;
+  padding-bottom: 0;
+}
+
+.widget.feature h2 span {
   background-color: hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(lighten(@color-swatch1,10%)), 0.6);
-  padding: 5px 10px 0; 
+  padding: 2px 5px; 
 }
 
 /* FEATURE STRAPLINE */
@@ -467,8 +490,12 @@ footer .widget.content {
   line-height:@font-swatch9-line-height;
   color: darken(@font-swatch9-color,10%);
   letter-spacing: @font-swatch9-letter-spacing;
+  padding-bottom: 0;
+}
+
+.widget.feature h3 span {
   background-color: hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(lighten(@color-swatch1,10%)), 0.6);
-  padding: 0 10px 5px; 
+  padding: 2px 5px; 
 }
 
 /* FEATURE BUTTON */
@@ -476,7 +503,7 @@ footer .widget.content {
 .widget.feature .feature-btn {
   display: block;
   float: right;
-  margin: 5px 0;
+  margin: 5px 0 7px;
 }
 
 .widget.feature button {
@@ -832,7 +859,7 @@ footer .widget.content {
 
 hr.line {
    background-color: lighten(@color-swatch3,25%);
-   height: 3px;
+   height: 2px;
    width: 100%;
    border: none;
 }
@@ -1335,7 +1362,7 @@ footer .widget.profile .twitter span {
 
 .widget.profile .bk-profile-socialicons span a {
     text-decoration: none;
-    text-indent: 9999px;
+    text-indent: -9999px;
     white-space: nowrap;
     height: 33px;
     width: 33px;
@@ -1438,7 +1465,7 @@ footer .widget.profile .twitter span {
 
 .widget.socialicons a {
     text-decoration: none;
-    text-indent: 9999px;
+    text-indent: -9999px;
     white-space: nowrap;
     height: 35px;
     width: 35px;
@@ -1676,6 +1703,13 @@ footer .widget.profile .twitter span {
 
 @media only screen and (max-width: 768px) {
 
+ /* DEFAULT PAGE TYPE */
+
+.bk-pt-default .widget.extendednavigation {
+  border-bottom: 1px solid lighten(@color-swatch3,25%);
+}
+ /**/
+
 .canvas { 
   max-width: 1010px;
   margin: 0 auto;
@@ -1692,30 +1726,14 @@ footer .widget.profile .twitter span {
     border-bottom: 0;
   }
 
-   header .wrapper {
-    margin: 0 auto;
-    width: 100%;
-  }
-
  .companyheader {
     width: 100%;
     display: block;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
   }
 
-  .widget.logo {
-    float: none;
-    padding: 8px 0 0 0;
-  }
-
-  .widget.companyname {
-    text-align: center;
-    float: none;
-    margin: 4px 0 8px 0;
-  }
-
-  .companyname a {
+  .widget.companyname a {
     font-size:bkscale(@font-swatch10-font-size, 0.9);
   }
 
@@ -1725,60 +1743,90 @@ footer .widget.profile .twitter span {
     max-width: 100%;
     width: 100%;
     padding: 0;
-    border-top: 3px solid lighten(@color-swatch3,25%);
-    border-bottom: 3px solid lighten(@color-swatch3,25%);
   }
   .widget .extendednavigation {
-    display: table;
-    *display: block;
-    *float: left;
+    display: block;
+    float: left;
     width: 100%;
+    border-top: 1px solid lighten(@color-swatch3,25%);
   }
 
-  .widget .extendednavigation ul {
-    display: table-row;
+    /* NAV ICON */
+
+  .widget .extendednavigation a.pull {
+    display: block;
     width: 100%;
-    float: none!important;
+    position: absolute;
+    top: 9px;
+  }
+
+    .widget .extendednavigation a.pull:after {
+    content:"";
+    background: image('/images/nav-icon.png') no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: -50px;
+  }
+
+  /* NAV */
+
+ .widget .extendednavigation ul {
+    width: 100%;
+    display: none;
+    margin: 0;
   }
 
   .widget.extendednavigation ul li {
-    padding: 15px 0 11px 0;
+  padding: 16px 0;
   }
 
   .widget .extendednavigation li {
-    display: table-cell !important;
-    float: none!important;
-    text-align: center;
-  }
-
-  .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
-    margin-left: 0;
-  }
-
-  .widget .extendednavigation li:last-child {
-    border-right: 0;
-   }
-
-   .widget .extendednavigation li:first-child {
-    border-left: 0;
-   }
-
-  .widget.extendednavigation li:hover > ul {
-    width: 28%;
+    width: 100%;
     padding: 0;
-    margin-top:1px;
-  }
-
-  .widget.extendednavigation li:hover > ul li {
-    display: block!important;
-  }
-
-   .widget.extendednavigation ul li:hover > ul li.folder .text {
-    margin-left: 0;
   }
 
   .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
-    text-align: center;
+      padding: 5px 0;
+      margin: 0;
+  }
+
+  .widget.extendednavigation ul li .text, .widget.extendednavigation ul li.folder .text {
+      padding-left: 15px;
+      background-image: image('/images/arrow-left.png');
+      background-position: left center;
+      background-repeat: no-repeat;
+  }
+
+  .widget.extendednavigation ul li:hover .text {
+     background-image: image('/images/arrow-left-hov.png');
+  }
+
+    .widget.extendednavigation ul li:hover > ul > li > a .text {
+    background-image: image('/images/arrow-left.png');
+  }
+
+    .widget.extendednavigation ul li:hover > ul > li:hover > a .text {
+    background-image: image('/images/arrow-left-hov.png');
+  }
+
+  .widget.extendednavigation ul li.folder:hover .text {
+}
+  .widget.extendednavigation ul li > ul {
+      display: none!important;
+  }
+
+  .widget.extendednavigation ul li:hover > ul {
+      display: block!important;
+      width: 100%;
+      margin: 17px 0;
+      padding: 0;
+  }
+
+  .widget.extendednavigation li:hover > ul > li > a {
+    padding-left: 10px;
   }
 
   /* EXTENDED NAVIGATION - INSIDE ZONE */
@@ -1878,113 +1926,14 @@ footer .widget.profile .twitter span {
 @media only screen and (max-width: 480px) {
 
 
-  /* DEFAULT PAGE TYPE */
-
-  .bk-pt-default .widget .extendednavigation ul li:last-child {
-    border-bottom: 2px solid @color-swatch5;
+ /* COMPANY HEADER */
+  .widget.companyname a {
+    font-size:bkscale(@font-swatch1-font-size, 0.6);
   }
 
-  /* COMPANY HEADER */
-  .widget.companyheader .company-name h1 {
-    font-size:bkscale(@font-swatch1-font-size, 0.8);
-  }
-
-  /* NAV */
-
-  .widget.extendednavigation {
-    width: 100%;
-    border-top: none;
-  }
-  .widget .extendednavigation {
-    display: block;
-    width: 100%;
-  }
-
-  .widget .extendednavigation ul {
-    display: block;
-    width: 100%;
-    float: left;
-    margin: 0;
-    border-top: 3px solid lighten(@color-swatch3,25%);
-  }
-
-  .widget .extendednavigation li {
-    display: block!important;
-    width: 100%;
-    border-bottom: 3px solid lighten(@color-swatch3,25%);
-    padding: 0;
-  }
-
-  .widget.extendednavigation ul li {
-    padding: 0;
-  }
-
-  .widget.extendednavigation ul li.folder {
-    padding: 0;
-  }
-
-  .widget .extendednavigation ul li a {
-    border-left: 0;
-    border-right: 0;
-    padding: 1.4em 1em;
-  }
-
-  .widget.extendednavigation ul li.folder .text {
-    padding: 1.4em 1em;
-    margin-left: 0;
-  }
-
-  .widget .extendednavigation ul li:last-child {
-    border: 0;
-  }
-
-  .widget.extendednavigation li:hover > ul {
-    padding: 0;
-    margin: 0 2.5% 0;
-    width: 95%;
-    background-color: lighten(@color-swatch3,31%);
-  }
-
-  .widget.extendednavigation li:hover > ul li {
-    display: block!important;
-    margin-bottom: 0;
-    text-align: center;
-    padding: 0;
-  }
-
-  .widget.extendednavigation li:hover > ul > li > a {
-    padding: 0;
-  }
-
-  .widget.extendednavigation ul li.folder:hover {
-    border-bottom: 3px solid lighten(@color-swatch3,25%);  
-  }
-
-  .widget.extendednavigation ul li:hover > ul li:first-child {
-    padding-top: 0;
-  }
-
-  .widget.extendednavigation ul li:hover > ul li:last-child {
-    border-bottom: 2px solid @color-swatch5;
-  }
-  
-  /* UL ALIGN RIGHT */
-  .widget.extendednavigation ul.align-right li:hover ul li {
-    text-align: right;
-  }
-
-  .widget.extendednavigation ul.align-right li.folder {
-    background-position: 12px center;
-  }
-
-  /* UL ALIGN CENTER */
-  .widget.extendednavigation ul.align-left li:hover ul li {
-    text-align: center;
-  }
-
-  /* UL ALIGN LEFT */
-  .widget.extendednavigation ul.align-left li:hover ul li {
-    text-align: left;
+  .widget.companyname {
+    max-width: 210px;
+    margin-top: 16px;
   }
 
   /* FEATURE */
@@ -1995,7 +1944,7 @@ footer .widget.profile .twitter span {
 
    .widget.feature .content {
     height: 200px;
-   }
+  }
 
   .widget.feature h2 {
     font-size:bkscale(@font-swatch8-font-size, 0.7);
@@ -2003,10 +1952,12 @@ footer .widget.profile .twitter span {
   }
 
   .widget.feature h3 {
-    font-size:bkscale(@font-swatch9-font-size, 0.7);
-    line-height: bkscale(@font-swatch8-line-height,0.7);
+    font-size:bkscale(@font-swatch9-font-size, 0.85);
+    line-height: bkscale(@font-swatch8-line-height,0.85);
   }
-
+  .widget.feature button {
+    padding: 13px;
+  }
 
   /* CLICK TO CALL */
 
