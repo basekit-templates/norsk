@@ -2,6 +2,10 @@
 	"name":"Norsk",
 	"thumbnail":"norsk.png",
 	"screenshot":"norsk.png",
+   "tags": {
+    "en": ["colorful", "bright", "clean", "vintage", "professional", "colourful"],
+    "es": ["colorido", "claro", "limpio", "vintage", "profesional"],
+    "br": ["colorido", "claro", "limpio", "vintage", "profissional"],
 	"colorSwatches":
     {
         "Swatch 1": {
