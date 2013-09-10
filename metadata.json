@@ -3,9 +3,9 @@
 	"thumbnail":"norsk.png",
 	"screenshot":"norsk.png",
     "tags": {
-    "en": ["colorful", "bright", "clean", "vintage", "professional", "colourful"],
-    "es": ["colorido", "claro", "limpio", "vintage", "profesional"],
-    "br": ["colorido", "claro", "limpio", "vintage", "profissional"]
+    "en": ["colorful", "bright", "clean", "vintage", "professional", "colourful", "classic", "pattern", "texture", "background", "furniture", "retail"],
+    "es": ["colorido", "claro", "limpio", "vintage", "profesional", "clasico", "patron", "textura", "fondo", "mueble", "minorista"],
+    "br": ["colorido", "claro", "limpio", "vintage", "profissional", "clássico", "padrão", "textura", "fundo", "movéis", "varejo"]
     },
 	"colorSwatches":
     {
