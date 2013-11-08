@@ -1,4 +1,14 @@
+/* ===============================
+   IMPORT CSS
+   =============================== */
+
 @import templatecommon('/paypal.less');
+@import templatecommon('/dropbox.less');
+
+
+/* ===============================
+   TEMPLATE STYLES
+   =============================== */
 
 body {
   background-image: image("/images/texture.png");
@@ -613,10 +623,23 @@ footer .widget.content {
 
 
 .widget.paypalbuynow .widget.button.paypal {
-   text-transform: uppercase;
-    -webkit-border-radius: 2px;
+  text-transform: uppercase;
+  -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
+}
+
+/* ===============================
+   DROPBOX WIDGET
+   =============================== */
+
+.widget.dropbox .b-wrap .btn {
+  padding: 13px 12px 11px 38px;
+  text-transform: uppercase;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-position: 11px center;
 }
 
 /* ===============================
