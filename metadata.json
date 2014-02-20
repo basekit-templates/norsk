@@ -12,7 +12,7 @@
         "Swatch 1": {
             "color1":"#ffffff",
             "color2":"#2d2727",
-            "color3":"#8fcb85",
+            "color3":"#8EC78C",
             "color4":"#5c5757",
             "color5":"#aa9c8d",
             "color6":"#545454",
@@ -113,7 +113,7 @@
             "font-size": "12px",
             "font-weight": "400",
             "line-height": "25px",
-            "color": "@color-swatch4",
+            "color": "@color-swatch3",
             "letter-spacing": "inherit",
             "background-color": "lighten(@color-swatch3,25%)",
             "background-color-hover": "lighten(@color-swatch3,20%)"
