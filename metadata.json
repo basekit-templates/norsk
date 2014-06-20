@@ -2,6 +2,7 @@
 	"name":"Norsk",
 	"thumbnail":"norsk.png",
 	"screenshot":"norsk.png",
+	"templateType":"standard",
     "tags": {
     "en": ["colorful", "bright", "clean", "vintage", "professional", "colourful", "classic", "pattern", "texture", "background", "furniture", "retail"],
     "es": ["colorido", "claro", "limpio", "vintage", "profesional", "clasico", "patron", "textura", "fondo", "mueble", "minorista"],
