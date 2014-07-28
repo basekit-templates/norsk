@@ -140,7 +140,7 @@
             "font-family": "\"Droid Serif\", Georgia, serif",
             "font-size": "25px",
             "font-weight": "400",
-            "line-height": "40px",
+            "line-height": "35px",
             "color": "@color-swatch6",
             "letter-spacing": "inherit"
         }

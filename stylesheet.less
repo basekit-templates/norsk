@@ -50,7 +50,7 @@ body {
    =============================== */
 
 header.bk-header {
-  padding: 10px 0;
+  padding: 40px 0 10px;
   width: 100%;
   margin: 0 auto;
 }
@@ -71,14 +71,16 @@ header.bk-header {
 /* COMPANY NAME */
 
 .widget.companyname {
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 /* LOGO */
 
 .widget.logo {
   display: inline-block;
-  padding: 10px 10px 10px 0;
+  padding: 0;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
 .welcome-text {
@@ -235,7 +237,8 @@ div.widget.extendednavigation ul li {
 }
 
 .widget .extendednavigation a.pull {
-  top: -36px;
+  top: initial;
+  bottom: -5px;
 }
 
 
@@ -1182,7 +1185,14 @@ select, input[type=search] {
 .bk-pt-default .widget.extendednavigation {
   border-bottom: 1px solid lighten(@color-swatch3,5%);
 }
- /**/
+
+.widget.extendednavigation .bk-overlay {
+  width: 40px;
+  left: inherit !important;
+  bottom: -5px!important;
+  top: initial!important;
+  height: 40px;
+}
 
 .canvas { 
   max-width: 1010px;
@@ -1196,9 +1206,9 @@ select, input[type=search] {
 }
 
   header.bk-header {
-    padding: 0;
+    padding: 20px 0 10px;
     border-bottom: 0;
-    border-top: 5px solid lighten(@color-swatch3,25%);
+    border-top: 5px solid @color-swatch3;
   }
 
   .brand {
@@ -1212,7 +1222,7 @@ select, input[type=search] {
   .widget.logo {
     display: block;
     margin-right: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 0;
     float: none;
     a img {
@@ -1229,6 +1239,7 @@ select, input[type=search] {
 
   .welcome-text {
     margin-bottom: 10px;
+    margin-left: 0;
     width: 80%;
     h3 {
       font-size: bkscale(@font-swatch4-font-size, 0.7);
