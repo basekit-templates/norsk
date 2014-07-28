@@ -6,11 +6,14 @@
 
 <div class="inner-bg">
 
-<header class="bk-header">
+ <header class="bk-header">
    <div class="wrapper clearfix">
         <div class="brand">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </div>
+        <div class="welcome-text">
+            {{widget('content', 'headercontent1', {"content":"<h3>Lorem Ipsum - Alam Thor</h3>"})|raw}}  
         </div>
     </div>
     <nav class="wrapper clearfix">
