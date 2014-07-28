@@ -65,6 +65,7 @@ header.bk-header {
 
 .brand {
   width: 70%;
+  vertical-align: bottom;
 }
 
 /* COMPANY NAME */
@@ -83,7 +84,7 @@ header.bk-header {
 .welcome-text {
   margin-right: -4px;
   width: 30%;
-  vertical-align: middle;
+  vertical-align: bottom;
   h3 {
     font-size: bkscale(@font-swatch4-font-size, 0.85);
     line-height: bkscale(@font-swatch4-line-height, 0.95);
@@ -297,7 +298,6 @@ div.widget.extendednavigation ul li {
             }
         }
         @media @mobile {
-            font-size: bkscale(@font-swatch9-font-size,0.55);
             span {
                 padding: 3px 7px;
             }
@@ -317,10 +317,6 @@ div.widget.extendednavigation ul li {
         &:hover {
             background-color: @font-swatch7-background-color-hover;
             cursor: pointer;
-        }
-        @media @mobile {
-            font-size: bkscale(@font-swatch7-font-size,0.8);
-            padding: 3px 6px;
         }
     }
     .spare {
@@ -1209,8 +1205,8 @@ select, input[type=search] {
     display: block;
     width: 100%;
     border-bottom: 1px solid gainsboro;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .widget.logo {
@@ -1320,6 +1316,10 @@ select, input[type=search] {
     padding-left: 10px;
   }
 
+  .widget.feature .feature-bgimg .content {
+    padding: 20px;
+  }
+
 }
 
 /* ===============================
@@ -1357,8 +1357,18 @@ select, input[type=search] {
   background-color: @font-swatch7-background-color;
   color: @font-swatch7-color;
   text-decoration: none;
-  
   cursor: pointer;
+}
+
+.widget.feature .feature-bgimg .content {
+  h3 {
+      font-size: bkscale(@font-swatch9-font-size, 0.75);
+      line-height:bkscale(@font-swatch9-line-height, 0.85);
+  } 
+  button {
+    padding: 8px 12px;
+
+  }
 }
 
   .widget.clicktocall a:hover {
