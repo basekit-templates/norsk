@@ -414,68 +414,77 @@ div.widget.extendednavigation ul li {
    TWITTER WIDGET
    =============================== */
 
-.widget.twitter a {
- color: @color-swatch4;
- font-size:@font-swatch5-font-size;
- text-decoration: none;
-}
-
-.widget.twitter a:hover {
-  text-decoration: none;
-}
-
-.widget.twitter ul {
-  padding: 20px 0;
-  margin: 0;
-}
-
-.widget.twitter ul li {
-  border-bottom: none;
-  list-style: none;
-  font-family: @font-swatch5-font-family;
-  font-size: @font-swatch5-font-size;
-  color: @font-swatch5-color;
-  padding: 30px 0;
-  border-bottom: 1px dotted lighten(@color-swatch5,25%);
-}
-
-.widget.twitter ul li:last-child {
-  padding-bottom: 30px;
-}
-
-.widget.twitter .twitter-profile-pic {
-  float: left;
-  padding-right: 15px;
-}
-
-.widget.twitter .twitter-content span.bk-full-name {
-  font-family: @font-swatch4-font-family;
-  font-size: @font-swatch5-font-size;
-  color: lighten(@color-swatch5,15%);
-  
-}
-
-.widget.twitter .twitter-content p {
-  padding: 0;
-  color: @color-swatch5;
-}
-
-.widget.twitter .twitter-content span, .widget.twitter .twitter-content time {
- color: lighten(@color-swatch3,15%);
-}
-
-.widget.twitter .twitter-content span a {
- color: lighten(@color-swatch3,15%);
- text-decoration: underline;
-
-}
-.widget.twitter .twitter-content span a:hover {
-   color: @color-swatch3;
-}
-
-.twitter div.twitter-profile-pic a,
-  div.twitter-profile-pic {
-    line-height: 0;
+.widget.twitter {
+  margin: 20px 0;
+  img {
+    border-radius: 50%;
+  }
+  p {
+    color: @color-swatch4;
+    padding: 0;
+  } 
+  li {
+    border-bottom: darken(@color-swatch1,10%);
+  }
+  ul li a:hover {
+    text-decoration: none;
+  }
+  li:last-child {
+    padding-bottom: 0;
+  }
+  // Tweet Content
+  .twitter-profile-pic {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 12%;
+    margin-right: 2%;
+    @media @tablet {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  .twitter-content {
+    float: none;
+    display: inline-block;
+    width: 85%;
+    span.bk-full-name {
+      color: @font-swatch4-color;
+      font-family: @font-swatch4-font-family;
+      font-size: bkscale(@font-swatch4-font-size, 0.8);
+      line-height: bkscale(@font-swatch4-line-height, 0.9);
+    }
+    // Tweet Link
+    p a, a:hover span.bk-full-name {
+      color: @color-swatch2;
+      text-decoration: none;
+    }
+    span a {
+      text-decoration: none;
+      &:hover {
+        color: @color-swatch2;
+        text-decoration: none;
+      }
+    }
+    p {
+      margin-top: 4px;
+      &:last-child {
+        font-weight: inherit;
+      }
+    }
+    // Extra Info
+    time {
+      display: none;
+    }
+    span, span a, p:last-child {
+      font-size: 13px;
+      color: @color-swatch3;
+      font-weight: inherit;
+      &:hover {
+        color: darken(@color-swatch3, 15%);
+      }
+    }
+  }
 }
 
 
@@ -627,7 +636,6 @@ div.widget.extendednavigation ul li {
     color: @font-swatch7-color;
     font-size: 1em;
     text-decoration: none;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
     vertical-align: top;
 }
 
