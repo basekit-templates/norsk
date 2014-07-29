@@ -8,14 +8,19 @@
 
 <div class="bk-pt-default">
 
-<header class="bk-header">
+ <header class="bk-header">
    <div class="wrapper clearfix">
-        <div class="companyheader clearfix">
+        <div class="brand">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         </div>
-            {{widget('extendednavigation', 'navigationheader', {})|raw}}          
+        <div class="welcome-text">
+            {{widget('content', 'headercontent1', {"content":"<h3>Lorem Ipsum - Alam Thor</h3>"})|raw}}  
+        </div>
     </div>
+    <nav class="wrapper clearfix">
+        {{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
+    </nav>
 </header>
 
 <div class="main wrapper clearfix">
