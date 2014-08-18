@@ -44,6 +44,13 @@ body {
   padding: 20px 0;
 }
 
+.transition (@prop: all, @time: 0.5s, @ease: ease) {
+    -webkit-transition: @prop @time @ease;  
+    -moz-transition:    @prop @time @ease;
+    -ms-transition:     @prop @time @ease; 
+    -o-transition:      @prop @time @ease;  
+    transition:         @prop @time @ease;
+}
 
 /* ===============================
    HEADER
@@ -123,7 +130,6 @@ footer.bk-footer .widget.content {
   display: block;
   position: relative;
   background-color: transparent;
-  float: left;
 }
 
 .widget.extendednavigation ul {
@@ -132,13 +138,12 @@ footer.bk-footer .widget.content {
 }
 
 div.widget.extendednavigation ul li {
-  float: left;
-  display: block;
+  display: inline-block;
   padding: 18px 0 20px 0;
 }
 
 .widget.extendednavigation ul li.folder {
-    display: block;
+    display: inline-block;
     background-image: image('/images/arrow-down.png');
     background-position: right center;
     background-repeat: no-repeat;
@@ -414,68 +419,79 @@ div.widget.extendednavigation ul li {
    TWITTER WIDGET
    =============================== */
 
-.widget.twitter a {
- color: @color-swatch4;
- font-size:@font-swatch5-font-size;
- text-decoration: none;
-}
-
-.widget.twitter a:hover {
-  text-decoration: none;
-}
-
-.widget.twitter ul {
-  padding: 20px 0;
-  margin: 0;
-}
-
-.widget.twitter ul li {
-  border-bottom: none;
-  list-style: none;
-  font-family: @font-swatch5-font-family;
-  font-size: @font-swatch5-font-size;
-  color: @font-swatch5-color;
-  padding: 30px 0;
-  border-bottom: 1px dotted lighten(@color-swatch5,25%);
-}
-
-.widget.twitter ul li:last-child {
-  padding-bottom: 30px;
-}
-
-.widget.twitter .twitter-profile-pic {
-  float: left;
-  padding-right: 15px;
-}
-
-.widget.twitter .twitter-content span.bk-full-name {
-  font-family: @font-swatch4-font-family;
-  font-size: @font-swatch5-font-size;
-  color: lighten(@color-swatch5,15%);
-  
-}
-
-.widget.twitter .twitter-content p {
-  padding: 0;
-  color: @color-swatch5;
-}
-
-.widget.twitter .twitter-content span, .widget.twitter .twitter-content time {
- color: lighten(@color-swatch3,15%);
-}
-
-.widget.twitter .twitter-content span a {
- color: lighten(@color-swatch3,15%);
- text-decoration: underline;
-
-}
-.widget.twitter .twitter-content span a:hover {
-   color: @color-swatch3;
-}
-
-.twitter div.twitter-profile-pic a,
-  div.twitter-profile-pic {
-    line-height: 0;
+.widget.twitter {
+  margin: 20px 0;
+  img {
+    border-radius: 50%;
+  }
+  p {
+    color: @color-swatch4;
+    padding: 0;
+  } 
+  li {
+    border-bottom: darken(@color-swatch1,10%);
+  }
+  ul li a:hover {
+    text-decoration: none;
+  }
+  li:last-child {
+    padding-bottom: 0;
+  }
+  // Tweet Content
+  .twitter-profile-pic {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 12%;
+    margin-right: 2%;
+    @media @tablet {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  .twitter-content {
+    float: none;
+    display: inline-block;
+    width: 85%;
+    span.bk-full-name {
+      color: @font-swatch4-color;
+      font-family: @font-swatch4-font-family;
+      font-size: bkscale(@font-swatch4-font-size, 0.8);
+      line-height: bkscale(@font-swatch4-line-height, 0.9);
+    }
+    // Tweet Link
+    p a, a:hover span.bk-full-name {
+      color: @color-swatch2;
+      font-family: @font-swatch5-font-family;
+      font-size: @font-swatch5-font-size;
+      text-decoration: none;
+    }
+    p a {
+      text-decoration: underline;
+    }
+    span a {
+      text-decoration: none;
+      &:hover {
+        color: @color-swatch2;
+        text-decoration: none;
+      }
+    }
+    p {
+      margin-top: 4px;
+      &:last-child {
+        font-weight: inherit;
+      }
+    }
+    // Extra Info
+    span, span a, p:last-child {
+      font-size: 13px;
+      color: @color-swatch3;
+      font-weight: inherit;
+      &:hover {
+        color: darken(@color-swatch3, 15%);
+      }
+    }
+  }
 }
 
 
@@ -596,6 +612,7 @@ div.widget.extendednavigation ul li {
     min-height: 60px;
     line-height: 60px;
     padding: 0;
+    margin: 0;
     margin-right: 1%;
     background-color: @color-swatch1;
     font-family: @font-swatch5-font-family;
@@ -627,7 +644,6 @@ div.widget.extendednavigation ul li {
     color: @font-swatch7-color;
     font-size: 1em;
     text-decoration: none;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
     vertical-align: top;
 }
 
@@ -840,46 +856,35 @@ footer.bk-footer .widget.profile .twitter span {
 }
 
 /* ===============================
-   GALLERY WIDGET
+   Gallery
    =============================== */
 
-.widget.gallery {
-  width: 101.2%;
-  margin-left: -0.5%;
+.widget.gallery ul li span.inner {
+    .title {
+        color: @color-swatch1;
+        font-weight: @font-swatch3-font-weight;
+        font-size: @font-swatch4-font-size;
+        margin-bottom: 0.3em;
+    }
+    .description {
+        color: @color-swatch1;
+    }
 }
 
-.widget.gallery ul li span.inner .title {
-  bottom: -48px;
-  opacity: 0;
-  z-index: 1;
+.widget.gallery .inner .image-data {
+    background: fade(@color-swatch4, 65%);
+    display: block;
+    opacity: 0;
+    height: auto;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 }
 
-.widget.gallery ul li span.inner .description {
-  line-height: @font-swatch5-line-height;
+.widget.gallery .inner:hover .image-data {
+    .transition( opacity, 0.5s, ease );
+    opacity: 1;
 }
-
-.widget.gallery ul li span.inner:hover .description {
-  display: block;
-  top: 0;
-  background: rgba(0,0,0, 0.25);
-  -webkit-transition: all .5s ease-in;  
-  -moz-transition:    all .5s ease-in;  
-  -ms-transition:     all .5s ease-in;  
-  -o-transition:      all .5s ease-in;  
-  transition:     all .5s ease-in;  
-  @media @tablet {
-    max-height: 100%;
-  }
-  @media @mobile {
-    display: none;
-  }
-}
-
-.widget.gallery ul li span.inner a:hover .title {
-  bottom: 0;
-  opacity: 1;
-}
-
 
 /* ===============================
    BLOG
@@ -1038,14 +1043,39 @@ footer.bk-footer .widget.profile .twitter span {
     }
 }
 
-/* Ecom Product Filters */
+/* ===============================
+   Ecommerce
+   =============================== */
 
 .productlist-filter {
    margin: 0 auto;
-  .form-group {
-    width: 25%;
-     box-sizing: border-box;
-  }
+    .form-group {
+        width: auto;
+        box-sizing: border-box;
+        label {
+            display: block;
+            padding-bottom: .4em;
+        }  
+        select {
+            width: auto;
+            @media @tablet {
+                width: 100%;
+            }
+        }
+        button.btn {
+            line-height: 24px;
+            font-size: 14px;
+            padding: 8px 14px;
+            display: inline-block;
+            cursor: pointer;
+            margin: 0;
+        }
+    }
+}
+
+.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
+    padding: 10px 5px 10px 0;
+    margin: 0 5px 0 0; 
 }
 
 .productlist-display-form .form-group {
@@ -1060,26 +1090,21 @@ footer.bk-footer .widget.profile .twitter span {
   }
 }
 
-.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
-  margin-right: 0;
-}
-
-.form-group.productlist-search:before {
-  content: "Search";
-  display: inline-block;
-  padding-bottom: .4em;
-}
-
 .form-group.productlist-search {
   position: relative;
   input[type=search] {
-    padding-right: 90px;
-     box-sizing: border-box;
+    display: inline-block;
+    padding-right: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    height: 44px;
   }
   button {
-    position: absolute;
-    right: 0;
-    bottom: 10px;
+    border: 1px solid lighten(@color-swatch3, 10%);
+    position: relative;
+    left: -5px;
+    height: 44px;
+    vertical-align: top;
   }
 }
 
@@ -1097,36 +1122,12 @@ footer.bk-footer .widget.profile .twitter span {
   }
 }
 
-button.btn {
-  line-height: 24px;
-  font-size: 14px;
-  padding: 8px 14px;
-  display: inline-block;
-  cursor: pointer;
-  margin: 0;
-}
-
-label {
-  display: inline-block;
-  padding-bottom: .4em;
-}
-
 select {
-  cursor: pointer;
-  position: relative;
-  background-image: image('/images/icons/arrow-down.png');
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-position-x: 95%;
-  background-position-y: 53%;
-  margin-bottom: 12px;
-  padding-right: 33px;
-}
-
-select, input[type=search] {
-  border: 1px solid lighten(@color-swatch5, 30%);
+  background-color: transparent;
+  border: 1px solid lighten(@color-swatch5, 12%);
+  color: @font-swatch5-color;
   line-height: 20px;
-  font-size: 14px;
+  font-size: 13px;
   text-indent: 0;
   width: 100%;
   padding: 8px 10px 10px;
@@ -1136,23 +1137,130 @@ select, input[type=search] {
   -ms-transition: border .2s;
   transition: border .2s;
   border-radius: 0;
-  height: 40px;
+  height: 45px;
 }
 
 .productlist-item-count {
   clear: both;
 }
 
-@media (max-width: 768px) {
-  .productlist-display-form {
-    label {
-      display: inline-block;
-      width: 19%;
+.widget.ecomproduct .ecom-product .ecom-product-cattag {
+  margin: 10px 0 10px;
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+// Ecom Basket Summary
+
+.ecombasketsummary a, .ecombasket .ecombasket-pull p {
+  font-family: @font-swatch7-font-family;
+  font-size: @font-swatch7-font-size;
+  font-weight: @font-swatch7-font-weight;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.widget.ecombasketsummary {
+  table {
+    border-spacing: 0;
+    width: 100%;
+    list-style: none;
+    color: @color-swatch4;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    tr:first-child { 
+      @media @mobile {
+          display: table-header-group;
+          th:nth-child(2) {
+            display: none;
+          }
+          th:nth-child(3) {
+            padding-left: 12px;
+          }
+      }
     }
-    select {
-      width: 80%;
+    th {
+      font-family: @font-swatch4-font-size;
+      font-size: bkscale(@font-swatch4-font-size, 0.85);
+      line-height: bkscale(@font-swatch4-line-height, 0.95);
+      padding-bottom: 15px;
+      text-align: left;
+    }
+    .basket-summary-items {
+      background: transparent;
+      td:first-child {
+        width: 25%;
+      }
+      @media @mobile {
+        display: table-row-group;
+        + tr {
+          display: block;
+        }
+      }
+      &:last-child {
+        td {
+          padding-bottom: 25px;
+        }
+      }
+      .image-wrap {
+        background-position: -9999px;
+        background-size: contain;
+        img {
+            max-width: 90%!important;
+        }
+      }
+      td:nth-child(2) {
+        padding-left: 15px;
+      }
+      .basket-summary-pricepu, .basket-summary-quantity, .basket-summary-amount {
+        font-size: @font-swatch5-font-size;
+        line-height: @font-swatch5-line-height;
+      }
+      .basket-summary-pricepu {
+        display: block;
+      }
+      .basket-summary-quantity {
+        display: inline-block;
+        margin: 10px 0 20px;
+        button {
+          height: auto;
+          line-height: initial;
+        }
+      }
+      .basket-summary-quantitybtn {
+        display: block;
+        span {
+            padding: 0 10px;
+        }
+      }
+      .basket-summary-amount {
+        color: darken(@color-swatch4, 10%);
+      }
+    }
+    .basket-summary-subtotal {
+      border: 2px solid lighten(@color-swatch3, 20%);
+      color: darken(@color-swatch4, 10%);
+      display: inline-block;
+      font-size: bkscale(@font-swatch5-font-size, 1.05);
+      line-height: bkscale(@font-swatch5-font-size, 1.1);
+      padding: 20px 25px;
+      margin-top: 25px;
     }
   }
+}
+
+.basket-summary-submit, .basket-summary-empty-cta {
+  display: inline-block;
+  padding: 0 12px;
+  margin-bottom: 15px;
+  line-height: 45px;
+  height: 45px;
+  font-weight: @font-swatch7-font-weight;
+}
+
+@media (max-width: 768px) {
   .productlist-display-form .form-group {
     float: none;
     width: 100%;
@@ -1160,18 +1268,24 @@ select, input[type=search] {
 
   } 
   .form-group.productlist-search button {
-    bottom: 0;
+    margin-left: -4px;
+    width: 25%;
   }
 
 }
 
-@media (max-width: 480px) {
-  .productlist-display-form {
-    select, label {
-      width: 100%;
-    }
-  }
+.widget.ecomproduct .ecom-product .ecom-product-preview-image-wrap {
+  text-align: left;
 }
+
+.widget.ecomproduct .ecom-product .ecom-product-go-to-checkout-btn {
+  color: @color-swatch1;
+  margin: 10px 0;
+  float: left;
+  padding: 0 12px;
+  font-weight: 600;
+}
+
 
 /* ===============================
    IPAD WIDTH
@@ -1385,11 +1499,4 @@ select, input[type=search] {
     padding: 20px 0;
     display:block;
   }
-  .widget.gallery ul.gallery-widget li {
-      width: 100%;
-      padding-bottom: 100%;
-  }
 }
-
-
-
