@@ -371,7 +371,7 @@ div.widget.extendednavigation ul li {
    =============================== */
 
 
-.widget.button button {
+.widget.button button, .btn {
   padding: 12px;
   border: 0;
   -webkit-border-radius: 2px;
@@ -383,11 +383,10 @@ div.widget.extendednavigation ul li {
   background: @font-swatch7-background-color;
   color: @font-swatch7-color;
   text-decoration: none;
-  
   cursor: pointer;
 }
 
-.widget.button button:hover {
+.widget.button button:hover, .btn:hover {
   background: @font-swatch7-background-color-hover;
 }
 
@@ -1113,15 +1112,15 @@ footer.bk-footer .widget.profile .twitter span {
 
 .ecom-product-go-to-checkout-btn {
   font-family: @font-swatch7-font-family;
-  line-height: 50px;
+  background-color: @font-swatch7-background-color;
   padding: 0;
   margin: 0;
-  min-height: 50px;
   font-size: @font-swatch7-font-size;
   font-weight: @font-swatch7-font-weight;
   -webkit-font-smoothing: inherit;
   &:hover {
     text-decoration: none;
+    background-color: @font-swatch7-background-color-hover;
   }
 }
 
