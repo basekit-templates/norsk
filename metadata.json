@@ -1,7 +1,7 @@
 {
 	"name":"Norsk",
 	"thumbnail":"norsk.png",
-	"screenshot":"norsk.png",
+	"screenshot":"norsk-screenshot.jpg",
 	"templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
