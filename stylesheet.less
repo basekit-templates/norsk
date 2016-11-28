@@ -500,16 +500,19 @@ div.widget.extendednavigation ul li {
    CONTACT FORM WIDGET
    =============================== */
 
-.widget.contactform form {
+.widget.contactform form,
+.advancedcontactform form {
     display: block;
 }
 
-.widget.contactform fieldset {
+.widget.contactform fieldset,
+.advancedcontactform fieldset {
     border: none;
     padding: 0;
 }
 
-.widget.contactform fieldset label {
+.widget.contactform fieldset label,
+.advancedcontactform fieldset label {
     width: 100%;
     float: left;
     font-family:@font-swatch5-font-family;
@@ -520,7 +523,8 @@ div.widget.extendednavigation ul li {
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.contactform fieldset input {
+.widget.contactform fieldset input,
+.advancedcontactform fieldset input {
     height: 40px;
     width: 100%;
     border: none;
@@ -534,12 +538,14 @@ div.widget.extendednavigation ul li {
     padding: 0;
 }
 
-.widget.contactform fieldset input:focus {
+.widget.contactform fieldset input:focus,
+.advancedcontactform fieldset input:focus {
     outline: none;
     box-shadow: 0 0 5px @color-swatch5;
 }
 
-.widget.contactform fieldset textarea {
+.widget.contactform fieldset textarea,
+.advancedcontactform fieldset textarea {
     height: 100px;
     width: 100%;
     border: none;
@@ -547,20 +553,23 @@ div.widget.extendednavigation ul li {
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
     background-color: lighten(@color-swatch2,80%);
-    text-indent: 8px;
     padding-top: 14px;
+    padding-left: 8px;
+    padding-right: 8px;
     margin-top: 6px;
     margin-bottom: 20px;
     resize: none;
     padding: 0;
 }
 
-.widget.contactform fieldset textarea:focus {
+.widget.contactform fieldset textarea:focus,
+.advancedcontactform fieldset textarea:focus {
     outline: none;
     box-shadow: 0 0 5px @color-swatch5;
 }
 
-.widget.contactform fieldset button.btn {
+.widget.contactform fieldset button.btn,
+.advancedcontactform fieldset button {
     padding: 12px;
     margin: 0;
     border: 0;
@@ -577,7 +586,8 @@ div.widget.extendednavigation ul li {
     float: right;
 }
 
-.widget.contactform fieldset button.btn:hover {
+.widget.contactform fieldset button.btn:hover,
+.advancedcontactform fieldset button:hover {
   background-color: @font-swatch7-background-color-hover;
   cursor: pointer;
 }
