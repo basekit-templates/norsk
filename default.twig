@@ -18,9 +18,18 @@
             {{widget('content', 'headercontent1', {"content":"<h3>Lorem Ipsum - Alam Thor</h3>"})|raw}}  
         </div>
     </div>
-    <nav class="wrapper clearfix">
-        {{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
-    </nav>
+ 
+      <div class="nav-flex">
+      <nav class="wrapper clearfix">
+          {{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
+      </nav>
+      {% if plugins.ecommerce.store.live %}
+        <div class="header-basket">
+          {{widget('ecombasket', 'shopbasket', {})|raw}}
+        </div>
+      {% endif %}
+    </div>
+
 </header>
 
 <div class="main wrapper clearfix">
