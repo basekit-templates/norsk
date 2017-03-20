@@ -102,6 +102,37 @@ header.bk-header {
   }
 }
 
+.nav-flex {
+  @media only screen and (min-width: 770px) {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+.header-basket {
+  z-index: 999;
+  .ecombasket-list-container {
+    background-color: @color-swatch1;
+    position: absolute;
+    width: 300px;
+    right: 0;
+    @media @tablet {
+      position: relative;
+      width: 100%;
+    }
+
+  }
+  .widget.ecombasket .ecombasket-pull {
+    width: 140px;
+    @media @tablet {
+      margin: 12px auto 0 !important;
+    }
+  }
+}
+
 
 /* ===============================
    FOOTER
@@ -372,7 +403,7 @@ div.widget.extendednavigation ul li {
    =============================== */
 
 
-.widget.button button, .btn {
+.widget.button button, .btn, .ecombasket-pull {
   padding: 12px;
   border: 0;
   -webkit-border-radius: 2px;
@@ -1574,3 +1605,5 @@ a.btn.ecombasket-summary-link {
     display:block;
   }
 }
+
+
